@@ -4,5 +4,5 @@ Docker container for Redisson Node
 
 ### Run Redis
     docker run -d --name redis-node redis
-### Run Redisson node
+### Run Redisson Node
     docker run -d --network container:redis-node -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node
