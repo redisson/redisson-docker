@@ -1,5 +1,5 @@
 # redisson-docker
-Docker container for Redisson Node based on Ubuntu
+Docker container for Redisson Node based on Ubuntu Server 14.04
 # How to use
 
 ### Run Redis
