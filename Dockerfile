@@ -1,4 +1,4 @@
-FROM java:7
+FROM java:8
 
 ENV REDISSON_VERSION 3.0.1
 ENV REDISSON_HOME /opt/redisson-node
