@@ -1,23 +1,20 @@
 FROM ubuntu:14.04
 
-ENV REDISSON_VERSION 3.1.0
+ENV REDISSON_VERSION 2.7.1
 ENV REDISSON_HOME /opt/redisson-node
 
 WORKDIR $REDISSON_HOME
 
-RUN apt-get update && \ 
-    apt-get install -y software-properties-common && \ 
-    add-apt-repository ppa:webupd8team/java -y && \ 
-    apt-get update
+RUN apt-get update && apt-get install -y software-properties-common
 
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \ 
-    apt-get install -y oracle-java8-installer
+ENV LANG en_US.UTF-8
+RUN locale-gen $LANG
 
-RUN apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /var/cache/oracle-jdk8-installer 
+RUN add-apt-repository ppa:openjdk-r/ppa
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle/
+RUN apt-get update && apt-get install -y openjdk-8-jdk
+
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 
 ADD http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.redisson&a=redisson-all&v=$REDISSON_VERSION&e=jar $REDISSON_HOME/redisson-all-$REDISSON_VERSION.jar
 
