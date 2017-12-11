@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 
 ENV REDISSON_VERSION 2.10.6
 ENV REDISSON_HOME /opt/redisson-node
