@@ -13,7 +13,7 @@ Redisson Node container has two variants:
 
 ## `redisson-node:<version>`
 
-Default image. Based on OpenJDK 1.8 image.
+Default image. Based on OpenJDK 1.8 (for 3.x version) or OpenJDK 1.7 (for 2.x version) image.
 
 ## `redisson-node:<version>-ubuntu`
 
