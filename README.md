@@ -2,8 +2,8 @@
 Docker container for Redisson Node
 
 # Supported tags and respective `Dockerfile` links
--	[`3.11.2`, `latest`, `master`](https://github.com/redisson/redisson-docker/blob/master/Dockerfile)
--	[`3.11.2-ubuntu`, `latest-ubuntu`, `master-ubuntu`](https://github.com/redisson/redisson-docker/blob/master-ubuntu/Dockerfile)
+-	[`3.11.3`, `latest`, `master`](https://github.com/redisson/redisson-docker/blob/master/Dockerfile)
+-	[`3.11.3-ubuntu`, `latest-ubuntu`, `master-ubuntu`](https://github.com/redisson/redisson-docker/blob/master-ubuntu/Dockerfile)
 
 # What is Redisson?
 
@@ -29,20 +29,20 @@ Based on Ubuntu 18.04 image with OpenJDK package.
     docker run -d --name redis-node redis
 
 ### Run Redisson Node
-    docker run -d --network container:redis-node -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2
+    docker run -d --network container:redis-node -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3
 with `JAVA_OPTS` parameters
 
-    docker run -d --network container:redis-node -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2
+    docker run -d --network container:redis-node -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3
 
 `<path-to-config>` - path to Redisson Node [config](https://github.com/redisson/redisson/wiki/12.-Standalone-node#122-configuration)
 
 ## 2. Run with external Redis
 
 ### Run Redisson Node
-    docker run -d -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2
+    docker run -d -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3
 with `JAVA_OPTS` parameters
 
-    docker run -d -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2
+    docker run -d -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3
 
 `<path-to-config>` - path to Redisson Node [config](https://github.com/redisson/redisson/wiki/12.-Standalone-node#122-configuration)
 
@@ -55,19 +55,19 @@ with `JAVA_OPTS` parameters
     docker run -d --name redis-node redis
 
 ### Run Redisson Node
-    docker run -d --network container:redis-node -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2-ubuntu
+    docker run -d --network container:redis-node -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3-ubuntu
 with `JAVA_OPTS` parameters
 
-    docker run -d --network container:redis-node -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2-ubuntu
+    docker run -d --network container:redis-node -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3-ubuntu
 
 `<path-to-config>` - path to Redisson Node [config](https://github.com/redisson/redisson/wiki/12.-Standalone-node#122-configuration)
 
 ## 2. Run with external Redis
 
 ### Run Redisson Node
-    docker run -d -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2-ubuntu
+    docker run -d -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3-ubuntu
 with `JAVA_OPTS` parameters
 
-    docker run -d -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.2-ubuntu
+    docker run -d -e JAVA_OPTS="-Xmx1g" -v <path-to-config>:/opt/redisson-node/redisson.conf redisson/redisson-node:3.11.3-ubuntu
 
 `<path-to-config>` - path to Redisson Node [config](https://github.com/redisson/redisson/wiki/12.-Standalone-node#122-configuration)
